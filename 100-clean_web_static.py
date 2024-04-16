@@ -8,7 +8,7 @@ from datetime import datetime
 from os.path import exists
 
 # Define web servers
-env.hosts = ['34.203.33.59', '34.396.82.54']
+env.hosts = ['34.203.33.59', '18.233.67.31']
 env.user = 'ubuntu'
 env.key_filename = '~/.ssh/school'
 
