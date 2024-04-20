@@ -4,8 +4,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
 from os import getenv
 from models.base_model import Base
-from models.state import State
-from models.city import City
+
 
 class DBStorage:
     """Database storage"""
@@ -59,5 +58,6 @@ class DBStorage:
         Session = scoped_session(session_factory)
         self.__session = Session()
 
-storage = DBStorage()
-storage.reload()
+    def close(self):
+        """Closes the session"""
+        self.__session.close()
